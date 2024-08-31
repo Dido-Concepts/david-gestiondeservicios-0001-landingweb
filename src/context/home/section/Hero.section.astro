@@ -1,0 +1,37 @@
+---
+import '@fontsource/rye';
+---
+
+<div
+  class="relative bg-cover bg-center h-[90vh]"
+  style="background-image: url('/home/hero/hero2.webp');"
+>
+  <!-- Superposicion de capa oscura -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <!-- Contenido del Hero -->
+  <div
+    class="relative z-10 flex flex-col justify-center items-center md:items-start h-full px-8 md:px-16 lg:px-24 text-app-terciary text-center md:text-left"
+  >
+    <h4 class="text-xs md:text-sm uppercase font-bold mb-2">Barbero en Ayacucho</h4>
+    <h1 class="text-3xl md:text-5xl lg:text-6xl mb-4 rye-font leading-tight">
+      VIVE UNA VIDA <br> CON ESTILO
+    </h1>
+    <p class="text-xs md:text-sm lg:text-lg mb-6 max-w-xs md:max-w-md lg:max-w-lg">
+      Aprovecha nuestro servicio de reserva en línea, rápido y directamente
+      desde la web, disponible las 24 horas
+    </p>
+    <a
+      href="#reservar"
+      class="border-2 border-app-secondary bg-app-secondary text-app-terciary font-bold py-3 px-6 rounded-md  hover:bg-app-terciary hover:text-app-secondary hover:border-2 hover:border-app-secondary transition duration-300"
+    >
+      Reservar una Cita
+    </a>
+  </div>
+</div>
+
+<style>
+  .rye-font {
+    font-family: 'Rye', system-ui;
+  }
+</style>

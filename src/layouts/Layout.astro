@@ -1,4 +1,11 @@
 ---
+import Navbar from '@src/components/Navbar.component.astro'
+import Footer from '@src/components/Footer.component.astro'
+
+import '@fontsource-variable/raleway'; // Supports weights 100-900
+
+
+
 interface Props {
 	title: string;
 }
@@ -16,8 +23,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative">
+		<Navbar />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -33,7 +42,7 @@ const { title } = Astro.props;
 		);
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'Raleway Variable', sans-serif;
 		background: #13151a;
 	}
 	code {
