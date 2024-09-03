@@ -1,12 +1,11 @@
 ---
 import "@fontsource/rye";
-import CardProduct from "@src/components/CardProduct.component.astro";
+import CardService from "@src/components/CardService.component.astro";
 
 interface Item {
   title: string;
   img: string;
   description: string;
-  price: string;
 }
 
 interface Props {
@@ -32,26 +31,25 @@ const { items, title1, title2 } = Astro.props as Props;
       </h3>
     </div>
 
-    <!-- Grid de Productos -->
+    <!-- Grid de Servicios -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {
         items.map((item) => (
-            <CardProduct
+            <CardService
               title={item.title}
               description={item.description}
               img={item.img}
-              price={item.price}
             />
           ))
       }
     </div>
 
-    <!-- Botón Ver más Productos -->
+    <!-- Botón Ver más Servicios -->
     <div class="text-center mt-12">
       <a
         href="#productos"
         class="border-2 border-app-secondary bg-app-secondary text-app-terciary font-bold py-3 px-6 rounded-md hover:bg-app-terciary hover:text-app-secondary hover:border-2 hover:border-app-secondary transition duration-300"
-        >Ver más Productos</a
+        >Ver todos los servicios</a
       >
     </div>
   </div>

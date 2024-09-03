@@ -1,0 +1,77 @@
+---
+import Layout2 from '@src/layouts/Layout2.astro';
+import NuestrosProductosSection from "@src/context/home/section/NuestrosProductos2.section.astro";
+
+const DataProduct = [
+  {
+    title1: 'Nuestros Productos',
+    title2: 'Calidad premium para el cuidado de tu cabello',
+    items: [
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p1.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p2.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p3.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p1.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p2.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p3.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p1.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p2.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p3.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      }
+    ]
+  }
+]
+---
+
+<Layout2 title="Nuestro Productos">
+
+    {
+        DataProduct.map(section => (
+          <NuestrosProductosSection title1={section.title1} title2={section.title2} items={section.items}/> 
+        ))
+      }
+
+  </Layout2>

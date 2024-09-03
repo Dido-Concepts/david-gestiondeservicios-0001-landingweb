@@ -3,9 +3,134 @@ import Icon from "@src/components/icon.component.astro";
 import Layout from "../layouts/Layout.astro";
 import Hero from "@src/context/home/section/Hero.section.astro";
 import NuestrosProductos from "@src/context/home/section/NuestrosProductos.section.astro";
+import CardProduct from "@src/components/CardProduct.component.astro";
+import SobreNosotros from "@src/context/home/section/SobreNosotros.section.astro";
+import NuestrosServicios from "@src/context/home/section/NuestrosServicios.section.astro";
+import Testimonios from "@src/context/home/section/Testimonios.section.astro";
+import Contacto from "@src/context/home/section/Contacto.section.astro";
+
+
+const DataProduct = [
+  {
+    title1: 'Nuestros Productos',
+    title2: 'Calidad premium para el cuidado de tu cabello',
+    items: [
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p1.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p2.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      },
+      {
+        title: 'PACK ANTICAÍDA Y FORTALECIMIENTO',
+        img: '/home/nuestros_productos/p3.webp',
+        description: 'Combate la caída del cabello y fortalece desde la raíz. Incluye champú, acondicionador y serum con ingredientes naturales para un cabello más fuerte y saludable.',
+        price:'29.50'
+      }
+    ]
+  }
+]
+
+
+const DataService = [
+  {
+    title1: 'Nuestros Servicios',
+    title2: 'Transformamos tu estilo con barberos expertos',
+    items: [
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s1.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s2.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s3.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      }
+    ]
+  }
+]
+
+const DataTestimony = [
+  {
+    title1: 'TESTIMONIOS',
+    title2: 'Opiniones reales, clientes satisfechos',
+    items: [
+      {
+        comment: '¡Excelente servicio! Los barberos son verdaderos profesionales y siempre salgo con un look increíble. Recomendado al 100%',
+        name: 'Eder Mendoza'
+      },
+      {
+        comment: '¡Excelente servicio! Los barberos son verdaderos profesionales y siempre salgo con un look increíble. Recomendado al 100%',
+        name: 'Eder Mendoza'
+      },
+      {
+        comment: '¡Excelente servicio! Los barberos son verdaderos profesionales y siempre salgo con un look increíble. Recomendado al 100%',
+        name: 'Eder Mendoza'
+      }
+    ]
+  }
+]
+
+const DataContacto = {
+    items: [
+      {
+        title: 'UBICACIÓN',
+        description: 'Jr. Londres 213 AYACUCHO, Perú',
+        nameLink: 'Ver Ubicación'
+      },
+      {
+        title: 'RESERVAS',
+        description: 'Genera un cita virtual hoy y asiste sin problemas a nuestro local',
+        nameLink: 'Reservar cita'
+      },
+      {
+        title: 'HORARIOS DE ATENCIÓN',
+        description: 'Lunes a Sábado 9:00 am - 9:00 pm',
+        nameLink: 'Contáctanos'
+      }
+    ]
+}
+
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Lima 21">
   <Hero />
-  <NuestrosProductos />
+
+  {
+    DataProduct.map(section => (
+      <NuestrosProductos title1={section.title1} title2={section.title2} items={section.items}/> 
+    ))
+  }
+  
+  <SobreNosotros />
+
+  {
+    DataService.map(section => (
+      <NuestrosServicios title1={section.title1} title2={section.title2} items={section.items}/> 
+    ))
+  }
+
+  {
+    DataTestimony.map(section => (
+      <Testimonios title1={section.title1} title2={section.title2} items={section.items}/> 
+    ))
+  }
+
+  {
+
+      <Contacto items={DataContacto.items}/> 
+  }
 </Layout>
