@@ -1,0 +1,22 @@
+---
+// Definir las propiedades (props) que el componente recibirá
+interface Props {
+  title: string;
+  nameLink: string;
+  description: string;
+}
+
+// Recibir las props
+const { title, nameLink, description } = Astro.props as Props;
+---
+
+<!-- Card -->
+<div class="bg-app-primary p-12 rounded-lg text-center">
+  <h3 class="font-bold italic text-xl mb-4">{title}</h3>
+  <p class="mb-4">{description}</p>
+  <a
+    href="#"
+    class="text-sm text-app-terciary font-extrabold hover:text-gray-500"
+    >{nameLink}</a
+  >
+</div>

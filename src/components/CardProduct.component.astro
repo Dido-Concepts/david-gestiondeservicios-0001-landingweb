@@ -1,0 +1,38 @@
+---
+// Definir las propiedades (props) que el componente recibirá
+interface Props {
+  title: string;
+  img: string;
+  description: string;
+  price: string;
+}
+
+// Recibir las props
+const { description, img, title, price } = Astro.props as Props;
+---
+
+<!-- Producto 1 -->
+<div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+  <img
+    src={img}
+    alt="Producto 1"
+    class="w-full h-80 object-cover rounded-2xl mb-4"
+  />
+  <h4
+    class="text-center md:text-start text-xl text-app-primary font-bold italic mb-2"
+  >
+    {title}
+  </h4>
+  <p class="text-start text-sm text-app-primary ">
+    {description}
+  </p>
+  <h4
+    class="text-center md:text-start text-xl text-app-primary font-bold italic my-4"
+  >
+    S/{price}
+  </h4>
+  <button
+    class="border-2 border-app-secondary text-app-secondary py-2 px-6 rounded-md hover:bg-app-secondary hover:text-app-terciary transition duration-300 w-full font-semibold"
+    >Pedir producto</button
+  >
+</div>

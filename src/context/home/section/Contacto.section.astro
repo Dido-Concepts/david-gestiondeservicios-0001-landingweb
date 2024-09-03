@@ -1,0 +1,36 @@
+---
+import ItemContacto from "@src/components/ItemContacto.component.astro";
+
+interface Item {
+    title: string;
+    nameLink: string;
+    description: string;
+}
+
+interface Props {
+    items: Item[];
+}
+
+const { items } = Astro.props as Props;
+---
+
+
+<section class="bg-app-terciary py-20 px-20">
+  <!-- Responsive optimizado --> 
+  <div
+    class="max-w-7xl mx-auto grid gap-8 auto-rows-[15rem] grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] text-app-terciary"
+  >
+
+
+    {
+        items.map((item) => (
+            <ItemContacto
+            title={item.title}
+            description={item.description}
+            nameLink={item.nameLink}
+            />
+        ))
+    }
+
+  </div>
+</section>

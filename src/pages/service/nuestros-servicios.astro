@@ -1,0 +1,69 @@
+---
+import Layout2 from '@src/layouts/Layout2.astro';
+import NuestrosServiciosSection from "@src/context/home/section/NuestrosServicios2.section.astro";
+
+const DataService = [
+  {
+    title1: 'Nuestros Servicios',
+    title2: 'Transformamos tu estilo con barberos expertos',
+    items: [
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s1.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s2.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s3.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s1.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s2.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s3.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s1.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s2.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      },
+      {
+        title: 'AFEITADO TRADICIONAL CON NAVAJA',
+        img: '/home/nuestros_servicios/s3.webp',
+        description: 'Experiencia de afeitado clásico con toalla caliente, espuma de afeitar y navaja, para un acabado suave y profesional.'
+      }
+    ]
+  }
+]
+
+---
+
+<Layout2 title="Nuestro Productos">
+
+    {
+        DataService.map(section => (
+          <NuestrosServiciosSection title1={section.title1} title2={section.title2} items={section.items}/> 
+        ))
+      }
+
+</Layout2>
