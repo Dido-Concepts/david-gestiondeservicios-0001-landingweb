@@ -16,18 +16,24 @@ interface Props {
 const { items, title1, title2 } = Astro.props as Props;
 ---
 
-<section class="bg-app-primary py-16 px-36">
-  <div class="max-w-7xl mx-auto text-center">
-    <h2
-      class="text-app-terciary text-2xl uppercase tracking-widest rye-font mb-2"
-    >
-      {title1}
-    </h2>
-    <h3 class="text-app-terciary text-3xl md:text-5xl font-bold italic mb-10">
-      {title2}
-    </h3>
+<section class="bg-app-primary py-16">
+  <div class="mx-auto text-center px-8 sm:px-14">
+
+    <!-- Títulos de la sección -->
+    <div class="text-center mb-12">
+      <h2
+        class="text-app-terciary text-2xl uppercase tracking-widest rye-font mb-2"
+      >
+        {title1}
+      </h2>
+      <h3 class="text-app-terciary text-3xl md:text-5xl font-bold italic mb-10">
+        {title2}
+      </h3>
+    </div>
+
+    <!-- Grid de Servicios -->
     <div
-      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 text-app-terciary"
+      class="max-w-7xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-app-terciary"
     >
       {
         items.map((item) => (
