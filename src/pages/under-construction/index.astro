@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Lima 21">
+  <div
+    class="relative bg-cover bg-center h-[90vh]"
+    style="background-image: url('/home/under_construction/img.webp');"
+  >
+    <!-- Superposicion de capa oscura -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+    <!-- Contenido del Hero -->
+    <div
+      class="relative z-10 flex flex-col justify-center items-center md:items-start h-full px-8 md:px-16 lg:px-24 text-app-terciary text-center md:text-left"
+    >
+      <h1 class="text-3xl md:text-5xl lg:text-6xl mb-4 font-bold leading-tight">
+        PÁGINA EN <br /> CONSTRUCCIÓN
+      </h1>
+    </div>
+  </div>
+</Layout>

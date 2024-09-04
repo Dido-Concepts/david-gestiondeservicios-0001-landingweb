@@ -6,11 +6,12 @@ interface Props {
 }
 
 // Recibir las props
-const { name, comment } = Astro.props as Props;
+const { name, comment} = Astro.props as Props;
 ---
 
 <div class="text-center">
     <p class="text-6xl text-app-secondary mb-4 font-bold italic">“</p>
     <p class="italic mb-4">{comment}</p>
     <p class="font-bold">{name}</p>
+    
 </div>
